@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Adiocrud.Models.Employee>
+@*@{
+    ViewData["Title"] = "Home Page";
+}*@
+
+<div class="text-center">
+    <h1 class="display-4">Employees</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Mobile</th>
+        </tr>
+        @foreach (var emp in Model)
+        {
+    <tr>
+        <td>@emp.Id</td>
+        <td>@emp.Name</td>
+        <td>@emp.Email</td>
+        <td>@emp.Gender</td>
+        <td>@emp.Mobile</td>
+        <td>@emp.DName</td>
+    </tr>
+        }
+    </table>
+</div>
